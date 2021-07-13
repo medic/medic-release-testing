@@ -19,7 +19,7 @@ var columnData = {
   }
 }
 
-const assignees = ['newtewt', 'ngaruko','brad1905']
+const assignees = ['newtewt', 'ngaruko','meghna-khemka']
 
 function getToken() {
   if(!fs.existsSync('token.json')){

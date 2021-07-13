@@ -14,7 +14,7 @@ As functionality is added to the app we should be adding release tests to ensure
 ## Generating a Project Board for Testing a Release
 
 
-Create a github personal access token and name it token.json in this directory. The only required permission is `public_repo Access public repositories`
+Create a [github personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) and name it token.json in this directory, like `{"token":"gxgjjuwj-xxxx-xxxx"}`. The only required permission is `public_repo Access public repositories`.
 
 Run `npm install`
 
@@ -25,6 +25,8 @@ EX: `node create_release_project.js --version 3.3.0`
 This will generate a project in medic-release-testing repo. Once completed you should see the link to the project in the console. 
 
 EX: Project created at: https://github.com/medic/medic-release-testing/projects/27
+
+To generate a project with specific test cases (eg for minor releases and patches), add a new label to the issues you need to test and modify labels in [config.js](https://github.com/medic/medic-release-testing/blob/master/config.js#L36) to use the new label.
 
 ## Executing Test Cases
 
